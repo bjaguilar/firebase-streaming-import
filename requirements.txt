@@ -1,5 +1,5 @@
 requests
 argparse
 ijson
-traceback
+traceback2
 pp

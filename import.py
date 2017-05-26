@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 import re
-import traceback
+import traceback2
 import pp
 import time
 
@@ -58,7 +58,7 @@ def main(args):
             try:
                 parallelJobs.submit(sendData, (url, dataObj, session, args), (), ("json", "requests"))
             except Exception, e:
-                print('Caught an error: ' + traceback.format_exc())
+                print('Caught an error: ' + traceback2.format_exc())
                 print prefix, event, value
 
     # If we don't wait for all jobs to finish, the script will end and kill all still open threads

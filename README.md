@@ -14,7 +14,17 @@ Firebase Streaming Import
 - Speed: about 30 seconds/mb, for datasets with many small leaf values.  Performance improves when leaves have larger values.
 
 Requirements: 
-- run `pip install -r requirements.txt`
+
+- Python 2.7
+
+- Create a virtualenv and install requirements
+
+  ```
+  virtualenv venv --python=python2.7
+  . venv/bin/activate
+  pip install -r requirements.txt
+  ```
+
 - May need to do `pip install pp --allow-unverified pp` in order to install the pp module
 
 ```
@@ -38,3 +48,10 @@ optional arguments:
   -p, --priority_mode   Run this script in priority mode after running it in
                         normal mode to write all priority values.
 ```
+
+For example:
+
+```shell
+python2.7 ./import.py https://gash-cr-staging.firebaseio.com/ /media/DATA/gash-temp.json 
+```
+
